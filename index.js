@@ -147,7 +147,7 @@ function moveDodgerRight() {
 
 function removeRock(rock) {
   debugger
-  GAME.remove(rock)
+  GAME.removeElement(rock)
 }
 
 /**
