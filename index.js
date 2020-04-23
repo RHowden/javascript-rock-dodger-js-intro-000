@@ -67,7 +67,6 @@ function createRock(x) {
      rock.style.top = `${top}px`
 
      if (checkCollision(rock)) {
-       debugger
        endGame()
      }
 
