@@ -72,7 +72,7 @@ function createRock(x) {
        endGame()
      }
 
-     if (true) {
+     if (top <= GAME_HEIGHT - 20) {
       window.requestAnimationFrame(moveRock)
      }
      else {
