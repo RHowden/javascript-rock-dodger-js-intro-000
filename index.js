@@ -29,16 +29,6 @@ function checkCollision(rock) {
     const rockLeftEdge = positionToInteger(rock.style.left)
     const rockRightEdge = rockLeftEdge + 20;
 
-    /**
-               * Think about it -- what's happening here?
-               * There's been a collision if one of three things is true:
-               * 1. The rock's left edge is < the DODGER's left edge,
-               *    and the rock's right edge is > the DODGER's left edge;
-               * 2. The rock's left edge is > the DODGER's left edge,
-               *    and the rock's right edge is < the DODGER's right edge;
-               * 3. The rock's left edge is < the DODGER's right edge,
-               *    and the rock's right edge is > the DODGER's right edge.
-               */
     if ((rockLeftEdge <= dodgerLeftEdge && rockRightEdge >= dodgerLeftEdge)
           || (rockLeftEdge >= dodgerLeftEdge && rockRightEdge <= dodgerRightEdge)
           || (rockLeftEdge <= dodgerRightEdge && rockRightEdge >= dodgerRightEdge)) {
@@ -104,6 +94,8 @@ function createRock(x) {
  * Finally, alert "YOU LOSE!" to the player.
  */
 function endGame() {
+  gameInterval = null
+  alert('You lose!')
 }
 
 function moveDodger(e) {
@@ -134,7 +126,6 @@ function moveDodgerLeft() {
 function moveDodgerRight() {
   function step() {
     var left = positionToInteger(DODGER.style.left)
-debugger
    if (left <= GAME_WIDTH - 68) {
      DODGER.style.left = `${left += 40}px`
    }
