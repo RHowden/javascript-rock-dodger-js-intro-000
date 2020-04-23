@@ -106,9 +106,7 @@ function createRock(x) {
  */
 function endGame() {
 
-if gameEnded {
-  return
-}
+
 gameEnded = true
   ROCKS.forEach(a => removeRock(a) )
 
