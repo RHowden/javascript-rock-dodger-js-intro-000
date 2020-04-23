@@ -11,6 +11,7 @@ const ROCKS = []
 const START = document.getElementById('start')
 
 var gameInterval = null
+var gameEnded = false
 
 /**
  * Be aware of what's above this line,
@@ -106,6 +107,10 @@ function createRock(x) {
  */
 function endGame() {
 
+if gameEnded {
+  return
+}
+gameEnded = true
   ROCKS.forEach(a => removeRock(a) )
 
   clearInterval(gameInterval)
