@@ -106,7 +106,7 @@ function createRock(x) {
  */
 function endGame() {
 debugger
-if gameEnded {
+if (gameEnded) {
   return
 }
 gameEnded = true
