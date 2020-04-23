@@ -108,7 +108,7 @@ function createRock(x) {
  */
 function endGame() {
   gameInterval = null
-  ROCKS.foreach(a => removeRock(a) )
+  ROCKS.forEach(a => removeRock(a) )
   alert('You lose!')
 }
 
