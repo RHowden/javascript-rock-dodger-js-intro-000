@@ -106,8 +106,9 @@ function createRock(x) {
 function endGame() {
 
   ROCKS.forEach(a => removeRock(a) )
-  alert('You lose!')
+
   clearInterval(gameInterval)
+  alert('You lose!')
 }
 
 function moveDodger(e) {
