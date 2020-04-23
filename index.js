@@ -105,8 +105,10 @@ function createRock(x) {
  * Finally, alert "YOU LOSE!" to the player.
  */
 function endGame() {
-
-
+debugger
+if gameEnded {
+  return
+}
 gameEnded = true
   ROCKS.forEach(a => removeRock(a) )
 
