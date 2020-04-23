@@ -66,7 +66,6 @@ function createRock(x) {
      rock.style.top = `${top}px`
 
      if (checkCollision(rock)) {
-       debugger
        endGame()
      }
 
@@ -74,7 +73,6 @@ function createRock(x) {
       window.requestAnimationFrame(moveRock)
      }
      else {
-       debugger
        removeRock(rock)
      }
     /**
